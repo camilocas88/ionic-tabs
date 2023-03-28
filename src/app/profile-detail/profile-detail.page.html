@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile-detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <div style="display: flex; align-items: center">
+        <ion-img
+          [src]="profile.profilePhoto"
+          alt="Profile Photo"
+          style="
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 16px;
+          "
+        ></ion-img>
+        <div>
+          <ion-card-title>{{ profile.jobTitle }}</ion-card-title>
+          <ion-card-subtitle
+            >{{ profile.firstName }} {{ profile.lastName }}</ion-card-subtitle
+          >
+        </div>
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Date of Birth</ion-label>
+          <ion-input type="text" value="{{ profile.dob }}"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Street</ion-label>
+          <ion-input type="text" value="{{ profile.street }}"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">City</ion-label>
+          <ion-input type="text" value="{{ profile.city }}"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">State</ion-label>
+          <ion-input type="text" value="{{ profile.state }}"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

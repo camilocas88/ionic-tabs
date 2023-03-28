@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProfileDetailPage } from '../profile-detail/profile-detail.page';
 import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
@@ -20,6 +21,10 @@ const routes: Routes = [
           import('../profile-form/profile-form.module').then(
             (m) => m.ProfileFormPageModule
           ),
+      },
+      {
+        path: 'profile-detail',
+        component: ProfileDetailPage,
       },
       {
         path: '',

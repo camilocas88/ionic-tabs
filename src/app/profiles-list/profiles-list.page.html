@@ -8,7 +8,7 @@
   <ion-grid>
     <ion-row>
       <ion-col size="12" *ngFor="let profile of profiles">
-        <ion-card >
+        <ion-card [routerLink]="['/tabs/profile-detail']" [queryParams]="{ profile: profile | json }" >
           <ion-card-header>
             <div style="display: flex; align-items: center">
               <ion-img
